@@ -2,7 +2,7 @@
 
 namespace FinalProject
 {
-    public class Board
+    public class Board: IDisplayable, IGameObject, IMovable
     {
         public const int Rows = 6; // The number of rows on the game board
         public const int Columns = 7; // The number of columns on the game board
@@ -11,6 +11,10 @@ namespace FinalProject
 
 
         public Board()
+        {
+            grid = new char[Rows, Columns]; // Initialize the game board as a 2D char array with dimensions Rows x Columns
+        }
+        public void Initialize()
         {
             grid = new char[Rows, Columns]; // Initialize the game board as a 2D char array with dimensions Rows x Columns
         }

@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace FinalProject
 {
-    public class ConnectFourGame
+    public class ConnectFourGame : Game
     {
         private Board board; // Represents the game board
         private Player currentPlayer; // Represents the current player
@@ -20,8 +20,9 @@ namespace FinalProject
             isGameOver = false; // Set the initial game over state to false, indicating that the game is not yet over
         }
 
-
-        public void Start()
+        // Override the abstract method "Start" from the base class "Game".
+        // This method provides the implementation specific to the Connect Four game.
+        public override void Start()
         {
             Console.WriteLine("****Connect Four Game****");
             Console.WriteLine();
